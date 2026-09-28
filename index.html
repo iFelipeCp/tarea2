@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2 - CSS3</title>
+    <link rel="stylesheet" href="assets/css/default.css">
+</head>
+
+<body>
+    <header id="main-header">
+        <h1 class="header-title">Tarea 2 CSS3</h1>
+        <nav class="header-nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#box-model">Box Model</a></li>
+                <li class="nav-item"><a href="#position">Position</a></li>
+                <li class="nav-item"><a href="#float">Float</a></li>
+                <li class="nav-item"><a href="#display">Display</a></li>
+                <li class="nav-item"><a href="#overflow">Overflow</a></li>
+                <li class="nav-item"><a href="#visibility">Visibility</a></li>
+                <li class="nav-item"><a href="#z-index">Z-Index</a></li>
+                <li class="nav-item"><a href="#flexbox">Flexbox</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="intro">
+            <article>
+                <h2 class="section-title">Diseño de Aplicaciones Web</h2>
+                <p class="section-description">Tarea 2: CSS3 - Prof. Mit. Sergio González Salazar</p>
+                <p class="section-description">Estudiante: Felipe Carvajal Perez</p>
+            </article>
+        </section>
+
+        <section id="box-model">
+            <h2 class="section-title">Modelo de Caja</h2>
+            <article>
+                <p class="section-description">Toda etiqueta HTML es una caja formada por contenido, padding
+                    (relleno), border (borde) y margin (margen).</p>
+                <div class="box-example">
+                    Esta caja tiene width de 300px, padding de 20px, border de 5px y margin de 30px.
+                </div>
+            </article>
+        </section>
+
+        <section id="block-inline">
+            <h2 class="section-title">Elementos de bloque y en línea</h2>
+            <article>
+                <p class="section-description">Los elementos de bloque ocupan toda la línea. Los elementos en línea
+                    solo ocupan el espacio de su contenido.</p>
+                <div class="block-example">Soy un div (bloque)</div>
+                <div class="block-example">Soy otro div (bloque)</div>
+                <p>Este párrafo tiene un <span class="inline-example">span (en línea)</span> y un
+                    <a href="#block-inline" class="inline-example">enlace (en línea)</a> dentro del texto.</p>
+                <br>
+                <p>Con la propiedad display se puede cambiar el comportamiento:</p>
+                <span class="span-block">Soy un span con display: block</span>
+                <div class="div-inline">Soy un div con display: inline</div>
+                <div class="div-inline">Yo también</div>
+            </article>
+        </section>
+
+        <section id="position">
+            <h2 class="section-title">Position</h2>
+            <article>
+                <p class="section-description">El encabezado de esta página usa position: fixed, por eso siempre se
+                    queda arriba al hacer scroll.</p>
+                <div class="position-container">
+                    <div class="box-static">static</div>
+                    <div class="box-relative">relative</div>
+                    <div class="box-absolute">absolute</div>
+                </div>
+            </article>
+        </section>
+
+        <section id="float">
+            <h2 class="section-title">Float y Clear</h2>
+            <article>
+                <p class="section-description">Tres columnas con float: left y un pie de página con clear: both.</p>
+                <div class="float-column">Columna 1</div>
+                <div class="float-column">Columna 2</div>
+                <div class="float-column">Columna 3</div>
+                <div class="float-footer">Pie con clear: both</div>
+            </article>
+        </section>
+
+        <section id="display">
+            <h2 class="section-title">Display</h2>
+            <article>
+                <p>display: inline</p>
+                <span class="display-box inline">A</span>
+                <span class="display-box inline">B</span>
+                <span class="display-box inline">C</span>
+
+                <p>display: inline-block</p>
+                <span class="display-box inline-block">A</span>
+                <span class="display-box inline-block">B</span>
+                <span class="display-box inline-block">C</span>
+
+                <p>display: block</p>
+                <span class="display-box block">A</span>
+                <span class="display-box block">B</span>
+
+                <p>display: none (la caja B no aparece)</p>
+                <span class="display-box inline-block">A</span>
+                <span class="display-box none">B</span>
+                <span class="display-box inline-block">C</span>
+            </article>
+        </section>
+
+        <section id="overflow">
+            <h2 class="section-title">Overflow</h2>
+            <article>
+                <div class="overflow-box visible">
+                    <b>visible:</b> el texto se sale de la caja. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+                <div class="overflow-box hidden">
+                    <b>hidden:</b> el texto que no cabe se corta. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+                <div class="overflow-box scroll">
+                    <b>scroll:</b> siempre muestra barras. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+                <div class="overflow-box auto">
+                    <b>auto:</b> muestra barra solo si hace falta. Lorem ipsum dolor sit amet, consectetur adipiscing
+                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+            </article>
+        </section>
+
+        <section id="visibility">
+            <h2 class="section-title">Visibility</h2>
+            <article>
+                <p>visibility: hidden (B no se ve pero deja su espacio)</p>
+                <span class="display-box inline-block">A</span>
+                <span class="display-box inline-block hidden-box">B</span>
+                <span class="display-box inline-block">C</span>
+
+                <p>visibility: collapse (la fila 2 de la tabla desaparece)</p>
+                <table class="visibility-table">
+                    <tr>
+                        <th>Curso</th>
+                        <th>Horario</th>
+                    </tr>
+                    <tr>
+                        <td>Fila 1: Diseño Web</td>
+                        <td>Lunes</td>
+                    </tr>
+                    <tr class="collapse-row">
+                        <td>Fila 2: Base de Datos</td>
+                        <td>Martes</td>
+                    </tr>
+                    <tr>
+                        <td>Fila 3: Programación</td>
+                        <td>Miércoles</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+
+        <section id="z-index">
+            <h2 class="section-title">Z-Index</h2>
+            <article>
+                <p class="section-description">La caja con el z-index más alto queda encima de las demás.</p>
+                <div class="z-container">
+                    <div class="z-box z-red">z-index: 1</div>
+                    <div class="z-box z-green">z-index: 3</div>
+                    <div class="z-box z-blue">z-index: 2</div>
+                </div>
+            </article>
+        </section>
+
+        <section id="flexbox">
+            <h2 class="section-title">Flexbox</h2>
+            <article>
+                <h3>Flex Container</h3>
+
+                <p>flex-direction: row-reverse</p>
+                <div class="flex-container direction">
+                    <div class="flex-item">1</div>
+                    <div class="flex-item">2</div>
+                    <div class="flex-item">3</div>
+                </div>
+
+                <p>flex-wrap: wrap</p>
+                <div class="flex-container wrap">
+                    <div class="flex-item">1</div>
